@@ -1,8 +1,10 @@
 ---
 date: '2021-11-03'
 editor: LYH
-�ۼ�: vscode
-output: pdf_document
+<U+FFFD><U+06FC><U+FFFD>: vscode
+output:
+  html_document:
+    df_print: paged
 ---
 
 # R for Data Visualization
@@ -89,10 +91,10 @@ ggplot(data = mpg) +
 + 재사용 템플릿
   * 아래의 bracketed sections을 데이터셋, 기하 함수, 매핑 요소들의 집합으로 바꿔야 함함
 
---
+```{}
 ggplot(data = <DATA>) +
   <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))
---
+```
 
 + 참조: 코드청크의 옵션들
 https://m.blog.naver.com/pmw9440/221587649036
@@ -109,6 +111,7 @@ https://m.blog.naver.com/pmw9440/221587649036
 ```{r}
 # Q1)
 ggplot(data = mpg)
+
 ```
 ```{r}
 # Q2)
@@ -119,6 +122,7 @@ str(mtcars)
 ```{r}
 # Q3)
 ?mpg
+
 ```
 + Ans: the type of drive train, where f = front-wheel drive, r = rear wheel drive, 4 = 4wd
 
@@ -134,7 +138,7 @@ ggplot(data = mpg) +
 
 ```
 + 왜 이 플랏이 유용하지 않냐? 
-  * drv와 class는 범주형 변수이기 때문문
+  * drv와 class는 범주형 변수이기 때문
 
 + 수식 연습
 
