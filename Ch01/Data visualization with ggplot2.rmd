@@ -1,7 +1,8 @@
 ---
-date: 2021-11-03
+date: '2021-11-03'
 editor: LYH
-작성: vscode
+�ۼ�: vscode
+output: pdf_document
 ---
 
 # R for Data Visualization
@@ -32,7 +33,7 @@ editor: LYH
 
 
 
-### Introduction
+### 1.1 Introduction
 
 + 이 챕터는 ggplot2로 데이터를 시각화하는 방법을 학습
 
@@ -48,6 +49,19 @@ library(tidyverse)
         - 가끔 내가 원하는 패키지가 깃허브에만 있을 수 있음
 
 
+**'mpg' 데이터 프레임 로드**
+```{r}
+ggplot2::mpg
+```
++ stc) `ggplot2` 패키지에 포함된 `mpg` 데이터를 로드하라
++ 자료 형태 234*11
++ 미환경보호국에서 수집한 38개 모델의 차에 관한 관측자료가 포함됨
++ Among the variables _mpg_ are:
+  * _disp_, 차의 엔진 사이즈(리터)
+  * _hwy_, 고속도로 상에서 차의 연료 효율(miles/gallon)
+
+
+
 + 수식 연습
 
 $$
@@ -55,5 +69,12 @@ $$
 \frac{\partial L}{\partial Z} \\ 
 \end{equation} 
 $$
+
+
+```{r}
+sessionInfo()
+
+```
+
 
 
