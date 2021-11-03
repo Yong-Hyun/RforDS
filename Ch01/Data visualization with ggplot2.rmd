@@ -1,0 +1,32 @@
+---
+date: 2021-11-03
+editor: LYH
+---
+
+### 공부의 방향
+
+이 책은 몇 년 책장에만 꽂혀 있었다. 우리가 국어사전이나 영어사전을 처음부터 끝까지 공부하지 않듯이 이 책은 나에게 사전같은 역할만 해왔다. 
+하지만 지식이 조직화되지 않고 모르는 것을 항상 인터넷 검색에 의존해서 분석하는 습관을 고쳐야 할 것 같았다. 물론 인터넷 검색이 빠르긴 하지만, 
+검색에 의존한 분석은 오히려 함수나 명령어의 재사용성을 낮아지게 만드는 부작용도 있었다. 따라서 내 목소리가 담긴 북리뷰를 할 예정이고, 매우 속도감 있게 정리해 나갈 것이다. 
+
+정리하면서 참조할 부분
+https://bookdown.org/
+The bookdown package is an open-source R package that facilitates writing books and long-form articles/reports with R Markdown. Features include:
+
+
+211103, LYH
+
+### Introduction
+
++ 이 챕터는 ggplot2로 데이터를 시각화하는 방법을 학습
+
+```{r}
+library(tidyverse)
+
+```
+
++ 라이브러리 설치는 `install.packages("tidyverse")` 이런 방식으로 할 수 있음
++ 패키지는 주로 두 곳에서 받을 수 있음
+    * 공식 사이트인 CRAN: `install.packages("tidyverse")`
+    * 개발 버전은 github: `devtools::install_github("r-lib/devtools")`
+        - 가끔 내가 원하는 패키지가 깃허브에만 있을 수 있음
