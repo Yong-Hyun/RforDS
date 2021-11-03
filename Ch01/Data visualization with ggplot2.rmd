@@ -29,6 +29,7 @@ output: pdf_document
 211103, LYH
 
 ---
+
 ## Chapter 01: Data Visaulization with ggplot2
 
 
@@ -36,6 +37,8 @@ output: pdf_document
 ### 1.1 Introduction
 
 + 이 챕터는 ggplot2로 데이터를 시각화하는 방법을 학습
+
+#### 1.1.1 필수조건(prerequisites)
 
 ```{r}
 library(tidyverse)
@@ -48,8 +51,9 @@ library(tidyverse)
     * 개발 버전은 github: `devtools::install_github("r-lib/devtools")`
         - 가끔 내가 원하는 패키지가 깃허브에만 있을 수 있음
 
+### 1.2 First Steps
 
-**'mpg' 데이터 프레임 로드**
+#### 1.2.1 'mpg' 데이터 프레임 로드
 ```{r}
 ggplot2::mpg
 ```
@@ -61,6 +65,76 @@ ggplot2::mpg
   * _hwy_, 고속도로 상에서 차의 연료 효율(miles/gallon)
 
 
+#### 1.2.2 Creating a ggplot
+```{r}
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy))
+```
++ 차의 엔진 사이즈와 연료 효율의 부적 상관
+  * 큰 엔진을 가진 차들은 연료를 더 많이 사용
+
++ ggplot()의 첫 번째 인수(argument)는 그래프에 사용할 데이터셋
+  * '**ggplot(data = mpg)**'은 빈 그래프를 만듦
+
++ layer를 추가하여 그래프 완성할 수 있음
+  * '**geom_point()**' 함수는 그래프에 점 layer를 추가함; 산점도(scatterplot)
+
++ ggplot2에서 각각의 geom 함수는 **매핑(mapping)** 인수를 취함
+  * 매핑 인수는 데이터셋의 변수들이 시각적 속성에 어떻게 매핑될지 정의해줌
+  * 매핑 인수는 항상 aes()와 짝을 이룸
+  * aes() 속에 x, y 인수는 x와 y 축에 어떤 변수들이 매핑되는지 특정해줌
+
+#### 1.2.3 A Graphing Template
+
++ 재사용 템플릿
+  * 아래의 bracketed sections을 데이터셋, 기하 함수, 매핑 요소들의 집합으로 바꿔야 함함
+
+--
+ggplot(data = <DATA>) +
+  <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))
+--
+
++ 참조: 코드청크의 옵션들
+https://m.blog.naver.com/pmw9440/221587649036
+
+
+
+
+
+
+
+
+**Exercises**
+
+```{r}
+# Q1)
+ggplot(data = mpg)
+```
+```{r}
+# Q2)
+str(mtcars)
+```
++ Ans: 32개의 관측치, 11개의 변수
+
+```{r}
+# Q3)
+?mpg
+```
++ Ans: the type of drive train, where f = front-wheel drive, r = rear wheel drive, 4 = 4wd
+
+```{r}
+# Q4) 
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = cyl, y = hwy))
+```
+```{r}
+# Q5)
+ggplot(data = mpg) +
+  geom_point(aes(x = drv, y = class))
+
+```
++ 왜 이 플랏이 유용하지 않냐? 
+  * drv와 class는 범주형 변수이기 때문문
 
 + 수식 연습
 
