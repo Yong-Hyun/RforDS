@@ -1,26 +1,36 @@
 ---
 date: 2021-11-03
 editor: LYH
+작성: vscode
 ---
 
-### Direction
+# R for Data Visualization
+
+### My Goals
 
 이 책은 몇 년 책장에만 꽂혀 있었다. 우리가 국어사전이나 영어사전을 처음부터 끝까지 공부하지 않듯이 이 책은 
 나에게 사전같은 역할만 해왔다. 
 하지만 지식이 조직화되지 않고 모르는 것을 항상 인터넷 검색에 의존해서 분석하는 습관을 고쳐야 할 것 같았다. 물론 인터넷 검색이 빠르긴 하지만, 
 검색에 의존한 분석은 오히려 함수나 명령어의 재사용성을 낮아지게 만드는 부작용도 있었다. 따라서 내 목소리가 담긴 북리뷰를 할 예정이고, 매우 속도감 있게 정리해 나갈 것이다. 
 
-이 책은 인터넷에 공개돼 있다. 저자는 `bookdown`패키지를 이용하여 책을 쓴 것 같고, 이것을 인터넷에 공개해 두고 있다. 
+** 코드를 이야기로 변환하는 훈련을 함께 하자. 변환 단축어를 Story Convert; `stc`라고 함
 
-참조: https://r4ds.had.co.nz/index.html
++ 이 책은 인터넷에 공개돼 있다. 저자는 `bookdown`패키지를 이용하여 책을 쓴 것 같고, 이것을 인터넷에 공개해 두고 있다. 
+
+    * 참조: https://r4ds.had.co.nz/index.html
 
 
-장기적으로 `bookdown`을 익혀야 할 것 같다. 
-참조: https://bookdown.org/
++ 장기적으로 `bookdown`을 익혀야 할 것 같다. 
+    * 참조: https://bookdown.org/
     * The bookdown package is an open-source R package that facilitates writing books and long-form articles/reports with R Markdown. 
 
 
 211103, LYH
+
+---
+## Chapter 01: Data Visaulization with ggplot2
+
+
 
 ### Introduction
 
@@ -28,9 +38,9 @@ editor: LYH
 
 ```{r}
 library(tidyverse)
-
 ```
 
++ stc: "타이디버스 패키지를 불러와"
 + 라이브러리 설치는 `install.packages("tidyverse")` 이런 방식으로 할 수 있음
 + 패키지는 주로 두 곳에서 받을 수 있음
     * 공식 사이트인 CRAN: `install.packages("tidyverse")`
@@ -40,12 +50,10 @@ library(tidyverse)
 
 + 수식 연습
 
-
 $$
 \begin{equation}
-
-\frac{\partial L}{\partial Z}
-
-\end{equation}
+\frac{\partial L}{\partial Z} \\ 
+\end{equation} 
 $$
+
 
